@@ -1,5 +1,5 @@
 (function($) {
-    // Shell for your plugin code
+
     $.fn.addGallery = function() {
         // Gallery
         function buildHTML() {
@@ -21,7 +21,7 @@
                 'position': 'relative',
                 'top': '15px',
                 'left': 0,
-                'margin': 'aut',
+                'margin': 'auto',
                 'padding': '10px',
                 'padding-top': '15px',
                 'height': '70%'
@@ -37,7 +37,6 @@
             $('#gallery_container').css(gallery_container);
             $('#big_img').css(big_img);
             $('#img_array').css(img_array);
-
         }
 
         function listThumbnails() {
@@ -55,8 +54,6 @@
                 'width': '60px',
                 'height': '60px',
                 'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
-                //&:hover{border-color:red;}
-                //&.selected{border-color:#eee;}
             }
             var images = $("#lightbox-gallery-container").data('images').split(",");
             var i, img;
@@ -84,10 +81,8 @@
         // select large image
         $("#img_array img").click(function(event) {
             $( "img" ).each(function() {
-                //$( this ).removeClass( "selected" );
                 $(this).css('border-color', 'black');
             });
-            //$(this).addClass('selected');
             $(this).css('border-color', 'white');
             $('#big_img img')
             .attr('src', $(this).attr('src'));
