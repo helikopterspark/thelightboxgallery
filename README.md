@@ -28,12 +28,12 @@ Add this code to your main JS-script:
 $(document).ready(function() {
     // other code
 
-    $('#lightbox-gallery-container').addLightbox();
+    $('#lightbox-gallery-container').addGallery();
 
     // other code
 });
 ```
-You also use only the lightbox function on any image:
+You can also use only the lightbox function on any image:
 
 ```
 $('img').click(function() {
